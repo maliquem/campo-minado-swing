@@ -6,19 +6,15 @@ import br.com.jael.cm.modelo.Tabuleiro;
 
 public class TelaPrincipal extends JFrame {
 
-    public TelaPrincipal() {
-        Tabuleiro tabuleiro = new Tabuleiro(15, 30, 5);
+    public TelaPrincipal(int linhas, int colunas, int bombas) {
+        Tabuleiro tabuleiro = new Tabuleiro(linhas, colunas, bombas);
         add(new PainelTabuleiro(tabuleiro));
 
         setTitle("CAMPO MINADO");
-        setSize(800, 600);
+        setSize(1280, 720);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        new TelaPrincipal();
     }
 
 }

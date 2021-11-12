@@ -61,12 +61,13 @@ public class BotaoCampo extends JButton implements CampoObservador, MouseListene
     }
 
     private void aplicarEstiloAbrir() {
-        setBorder(BorderFactory.createLineBorder(Color.GRAY));
 
-        if (campo.isMinado()) {
+        if (campo.isMinado() && !campo.isMarcado()) {
             setBackground(BG_EXPLODIR);
             return;
         }
+
+        setBorder(BorderFactory.createLineBorder(Color.GRAY));
 
         setBackground(BG_PADRAO);
 
