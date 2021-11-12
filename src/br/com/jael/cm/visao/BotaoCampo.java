@@ -2,6 +2,7 @@ package br.com.jael.cm.visao;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -58,9 +59,13 @@ public class BotaoCampo extends JButton implements CampoObservador, MouseListene
     private void aplicarEstiloMarcado() {
         setBackground(BG_MARCAR);
         setText("M");
+        setEnabled(false);
+
     }
 
     private void aplicarEstiloAbrir() {
+
+        setEnabled(true);
 
         if (campo.isMinado() && !campo.isMarcado()) {
             setBackground(BG_EXPLODIR);

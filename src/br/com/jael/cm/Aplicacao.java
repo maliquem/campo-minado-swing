@@ -1,7 +1,7 @@
 package br.com.jael.cm;
 
 import br.com.jael.cm.visao.TelaPrincipal;
-import br.com.jael.cm.visao.TelaSelecao;
+import java.awt.*;
 
 public class Aplicacao {
 
@@ -11,9 +11,7 @@ public class Aplicacao {
         int colunas = 40;
         int bombas = 100;
 
-        new TelaSelecao();
-
-        new TelaPrincipal(linhas, colunas, bombas);
+        EventQueue.invokeLater(() -> new TelaPrincipal(linhas, colunas, bombas));
 
     }
 
